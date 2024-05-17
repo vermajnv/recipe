@@ -1,1 +1,15 @@
-<p>shopping-edit works!</p>
+<div class="container">
+    <form action="#" class="form-inline">
+        <div class="form-group col-sm-4">
+            <label class="form-group">Name</label>
+            <input type="text" class="form-control" #ingName>
+        </div>
+        <div class="form-group col-sm-4">
+            <label class="form-group">Amount</label>
+            <input type="text" class="form-control" #ingAmount>
+        </div>
+        <button class="btn btn-primary" type="button" (click)="addIngredient()">Add</button>
+        <button class="btn btn-danger" type="button">Delete</button>
+        <button class="btn btn-default" type="button">Clear</button>
+    </form>
+</div>
