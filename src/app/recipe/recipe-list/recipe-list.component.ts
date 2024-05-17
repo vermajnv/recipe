@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -8,7 +8,7 @@ import { Recipe } from '../recipe.model';
 })
 
 export class RecipeListComponent {
-  recipes : Recipe[] = [
+  @Input() recipes : Recipe[] = [
     new Recipe('A test recipe', 'This is the first description', './assets/images/recipe.webp')
   ];
 

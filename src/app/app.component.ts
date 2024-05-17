@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe';
-  menuTitle : string = 'recipe';
+  
+  @Output() menuTitle : string = 'recipe';
 
   onNavigate(menu : string)
   {

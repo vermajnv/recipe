@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Output, Input, input} from '@angular/core';
 
 @Component({
     'selector' : 'app-header',
@@ -8,6 +8,8 @@ import {Component, EventEmitter, Output} from '@angular/core';
 
 export class HeaderComponent {
     @Output() menuChangeEvent  = new EventEmitter<string>();
+    
+    @Input() selectedHeaderMenu;
     
     onChangeMenu(menuTite : string)
     {
