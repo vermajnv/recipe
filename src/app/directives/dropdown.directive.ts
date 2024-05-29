@@ -12,11 +12,13 @@ export class DropdownDirective {
 
     }
 
-    @HostListener('click') onClick(eventData : Event)
+    @HostListener('document:click', ['$event']) onClick(eventData : Event)
 
     {
-        this.isOpen = !this.isOpen;
+        // this.isOpen = !this.isOpen;
+        // Close on clicking anywhere
 
+        this.isOpen = this.elementRef.nativeElement.contains(eventData.target) ? !this.isOpen : false;
         // this.elementRef.nativeElement.parentElement.classList.toggle('open');
     }
 
